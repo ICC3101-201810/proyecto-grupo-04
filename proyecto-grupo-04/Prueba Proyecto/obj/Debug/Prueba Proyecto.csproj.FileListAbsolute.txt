@@ -1,0 +1,11 @@
+C:\Users\Seba\Desktop\Seba\Universidad\Programacion Orientada a Objetos\Prueba Proyecto\Prueba Proyecto\Prueba Proyecto\obj\Debug\Prueba Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\Seba\Desktop\Seba\Universidad\Programacion Orientada a Objetos\Prueba Proyecto\Prueba Proyecto\Prueba Proyecto\obj\Debug\Prueba Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Seba\Desktop\Seba\Universidad\Programacion Orientada a Objetos\Prueba Proyecto\Prueba Proyecto\Prueba Proyecto\bin\Debug\Prueba Proyecto.exe.config
+C:\Users\Seba\Desktop\Seba\Universidad\Programacion Orientada a Objetos\Prueba Proyecto\Prueba Proyecto\Prueba Proyecto\bin\Debug\Prueba Proyecto.exe
+C:\Users\Seba\Desktop\Seba\Universidad\Programacion Orientada a Objetos\Prueba Proyecto\Prueba Proyecto\Prueba Proyecto\bin\Debug\Prueba Proyecto.pdb
+C:\Users\Seba\Desktop\Seba\Universidad\Programacion Orientada a Objetos\Prueba Proyecto\Prueba Proyecto\Prueba Proyecto\obj\Debug\Prueba Proyecto.exe
+C:\Users\Seba\Desktop\Seba\Universidad\Programacion Orientada a Objetos\Prueba Proyecto\Prueba Proyecto\Prueba Proyecto\obj\Debug\Prueba Proyecto.pdb
+C:\Users\Seba\Desktop\Seba\Universidad\Programacion Orientada a Objetos\Prueba Proyecto 2\Prueba Proyecto\Prueba Proyecto\obj\Debug\Prueba Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\Seba\Desktop\Seba\Universidad\Programacion Orientada a Objetos\Prueba Proyecto 2\Prueba Proyecto\Prueba Proyecto\obj\Debug\Prueba Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Seba\Desktop\Seba\Universidad\Programacion Orientada a Objetos\Prueba Proyecto 2\Prueba Proyecto\Prueba Proyecto\obj\Debug\Prueba Proyecto.exe
+C:\Users\Seba\Desktop\Seba\Universidad\Programacion Orientada a Objetos\Prueba Proyecto 2\Prueba Proyecto\Prueba Proyecto\obj\Debug\Prueba Proyecto.pdb
