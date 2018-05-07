@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Prueba_Proyecto
+namespace Proyecto_Poo
 {
     public abstract class Accesorio
     {
@@ -19,7 +19,6 @@ namespace Prueba_Proyecto
         }
         public virtual void Fragil()
         {
-
         }
     }
 }

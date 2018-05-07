@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net;
+using System.Net.Mail;
 
-namespace Prueba_Proyecto
+namespace Proyecto_Poo
 {
     public class Admin : Persona
     {
@@ -61,7 +63,6 @@ namespace Prueba_Proyecto
             }
             return false;
         }
-
         public void AddRestriccion(Estudiante estudiante)
         {
             restriciones.Add(estudiante);
@@ -109,6 +110,5 @@ namespace Prueba_Proyecto
                 }
             }
         }
-
     }
 }

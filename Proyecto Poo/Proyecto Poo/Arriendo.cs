@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Prueba_Proyecto
+namespace Proyecto_Poo
 {
     public class Ariendo
     {
@@ -21,6 +21,5 @@ namespace Prueba_Proyecto
             tiempoInicial = miTiempoInicial;
             accesorios = miAccesorios;
         }
-
     }
 }

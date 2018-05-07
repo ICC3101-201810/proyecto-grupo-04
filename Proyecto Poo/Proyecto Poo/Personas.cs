@@ -3,32 +3,58 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net;
+using System.Net.Mail;
 
-namespace Prueba_Proyecto
+namespace Proyecto_Poo
 {
-    public class Estudiante : Persona
+    public abstract class Persona
     {
-        List<Accesorio> carroCompra;
-        public string carrera;
-        Accesorio noteb = new Notebook(0, 0);
-        public Estudiante(string miNombre, string miApellido, string miCarrera) : base(miNombre, miApellido)
+        public List<Accesorio> carroArriendo;
+        public string nombre;
+        public string apellido;
+        public string email;
+
+        public Persona(string miNombre, string miApellido)
         {
-            carrera = miCarrera;
+            nombre = miNombre;
+            apellido = miApellido;
 
         }
-        public override void ArrendarAccesorio(Accesorio accesorio)
-        {
-            if (accesorio.GetType() == noteb.GetType())
-            {
-                Console.WriteLine("Estudiantes no pueden arrendar notebooks");
-            }
-            else
-            {
-                carroCompra.Add(accesorio);
-            }
 
+        public virtual void OcuparSala(Sala sala, Edificio edificio)
+        {
+            edificio.salasDisponibles.Remove(sala);
+            edificio.salasNoDisponibles.Add(sala);
         }
-        public override void Enviar(Sala a)
+
+        public virtual void DesocuparSala(Sala sala, Edificio edificio)
+        {
+            edificio.salasNoDisponibles.Remove(sala);
+            edificio.salasDisponibles.Add(sala);
+        }
+
+
+        public virtual string GetMail()
+        {
+            email = nombre[0] + apellido + "@miuandes.cl";
+            return email;
+        }
+
+        public virtual void ArrendarAccesorio(Accesorio accesorio)
+        {
+            carroArriendo.Add(accesorio);
+        }
+        public double Pagar()
+        {
+            double precioTotal = 0;
+            foreach (Accesorio a in carroArriendo)
+            {
+                precioTotal += a.precio;
+            }
+            return precioTotal;
+        }
+        public virtual void Enviar(Sala a)
         {
             string de, clave, para, asunto, cuerpo;
 
@@ -63,7 +89,6 @@ namespace Prueba_Proyecto
                 }
             }
         }
-
 
     }
 }
