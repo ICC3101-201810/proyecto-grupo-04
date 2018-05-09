@@ -10,3 +10,9 @@ C:\Users\Seba\Desktop\Proyecto-Windows-Forms\WindowsFormsApp4 - Copy\ClassLibrar
 C:\Users\Seba\Desktop\Proyecto-Windows-Forms\WindowsFormsApp4 - Copy\ClassLibrary2\obj\Debug\ClassLibrary2.csproj.CoreCompileInputs.cache
 C:\Users\Seba\Desktop\Proyecto-Windows-Forms\WindowsFormsApp4 - Copy\ClassLibrary2\obj\Debug\ClassLibrary2.dll
 C:\Users\Seba\Desktop\Proyecto-Windows-Forms\WindowsFormsApp4 - Copy\ClassLibrary2\obj\Debug\ClassLibrary2.pdb
+C:\Users\quequ_000\Desktop\proyecto-grupo-04\WindowsFormsApp4 - Copy\ClassLibrary2\bin\Debug\ClassLibrary2.dll
+C:\Users\quequ_000\Desktop\proyecto-grupo-04\WindowsFormsApp4 - Copy\ClassLibrary2\bin\Debug\ClassLibrary2.pdb
+C:\Users\quequ_000\Desktop\proyecto-grupo-04\WindowsFormsApp4 - Copy\ClassLibrary2\obj\Debug\ClassLibrary2.csprojResolveAssemblyReference.cache
+C:\Users\quequ_000\Desktop\proyecto-grupo-04\WindowsFormsApp4 - Copy\ClassLibrary2\obj\Debug\ClassLibrary2.csproj.CoreCompileInputs.cache
+C:\Users\quequ_000\Desktop\proyecto-grupo-04\WindowsFormsApp4 - Copy\ClassLibrary2\obj\Debug\ClassLibrary2.dll
+C:\Users\quequ_000\Desktop\proyecto-grupo-04\WindowsFormsApp4 - Copy\ClassLibrary2\obj\Debug\ClassLibrary2.pdb
