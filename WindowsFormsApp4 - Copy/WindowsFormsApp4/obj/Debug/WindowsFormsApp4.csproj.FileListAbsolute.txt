@@ -1,0 +1,42 @@
+c:\users\kitor\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\WindowsFormsApp4.exe.config
+c:\users\kitor\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\WindowsFormsApp4.exe
+c:\users\kitor\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\WindowsFormsApp4.pdb
+c:\users\kitor\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.csprojResolveAssemblyReference.cache
+c:\users\kitor\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.Properties.Resources.resources
+c:\users\kitor\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.csproj.GenerateResource.cache
+c:\users\kitor\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.csproj.CoreCompileInputs.cache
+c:\users\kitor\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.exe
+c:\users\kitor\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.pdb
+c:\users\kitor\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.Menu.resources
+C:\Users\kitor\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\ClassLibrary2.dll
+C:\Users\kitor\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\ClassLibrary2.pdb
+C:\Users\kitor\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.csproj.CopyComplete
+C:\Users\kitor\OneDrive\Desktop\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.csprojResolveAssemblyReference.cache
+C:\Users\kitor\OneDrive\Desktop\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.exe
+C:\Users\kitor\OneDrive\Desktop\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.pdb
+C:\Users\kitor\OneDrive\Desktop\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\WindowsFormsApp4.exe.config
+C:\Users\kitor\OneDrive\Desktop\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\WindowsFormsApp4.exe
+C:\Users\kitor\OneDrive\Desktop\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\WindowsFormsApp4.pdb
+C:\Users\kitor\OneDrive\Desktop\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\ClassLibrary2.dll
+C:\Users\kitor\OneDrive\Desktop\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\ClassLibrary2.pdb
+C:\Users\kitor\OneDrive\Desktop\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.Menu.resources
+C:\Users\kitor\OneDrive\Desktop\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.Properties.Resources.resources
+C:\Users\kitor\OneDrive\Desktop\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.csproj.GenerateResource.cache
+C:\Users\kitor\OneDrive\Desktop\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.csproj.CoreCompileInputs.cache
+C:\Users\kitor\OneDrive\Desktop\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.csproj.CopyComplete
+C:\Users\Seba\Desktop\Proyecto-Windows-Forms\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.csprojResolveAssemblyReference.cache
+C:\Users\Seba\Desktop\Proyecto-Windows-Forms\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.Menu.resources
+C:\Users\Seba\Desktop\Proyecto-Windows-Forms\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.Properties.Resources.resources
+C:\Users\Seba\Desktop\Proyecto-Windows-Forms\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.csproj.GenerateResource.cache
+C:\Users\Seba\Desktop\Proyecto-Windows-Forms\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.csproj.CoreCompileInputs.cache
+C:\Users\Seba\Desktop\Proyecto-Windows-Forms\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.exe
+C:\Users\Seba\Desktop\Proyecto-Windows-Forms\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.pdb
+C:\Users\Seba\Desktop\Proyecto-Windows-Forms\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.Login.resources
+C:\Users\Seba\Desktop\Proyecto-Windows-Forms\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\WindowsFormsApp4.exe.config
+C:\Users\Seba\Desktop\Proyecto-Windows-Forms\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\WindowsFormsApp4.exe
+C:\Users\Seba\Desktop\Proyecto-Windows-Forms\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\WindowsFormsApp4.pdb
+C:\Users\Seba\Desktop\Proyecto-Windows-Forms\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\ClassLibrary2.dll
+C:\Users\Seba\Desktop\Proyecto-Windows-Forms\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\ClassLibrary2.pdb
+C:\Users\Seba\Desktop\Proyecto-Windows-Forms\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.MenuCuenta.resources
+C:\Users\Seba\Desktop\Proyecto-Windows-Forms\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.csproj.CopyComplete
+C:\Users\Seba\Desktop\Proyecto-Windows-Forms\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.MenuAdmin.resources
