@@ -13,8 +13,14 @@ using System.Windows.Forms;
 namespace WindowsFormsApp4
 {
     public partial class Menu : Form
+
     {
-        private Edificio edificio = new Edificio();
+        Thread th;
+        public static List<Credencial> credenciales;
+        public List<Persona> personas;
+        public Edificio edificio;
+        public Persona currentUser;
+
 
         private List<Accesorio> carrito = new List<Accesorio>();
         BindingSource carritoBinding = new BindingSource();
@@ -27,10 +33,15 @@ namespace WindowsFormsApp4
 
         BindingSource salasBinding = new BindingSource();
         BindingSource accesoriosBinding = new BindingSource();
-        public Menu()
+        public Menu(List<Credencial> _credenciales, List<Persona> _personas, Edificio _edificio, Persona _currentUser)
         {
             InitializeComponent();
-            SetupData();
+
+            credenciales = _credenciales;
+            personas = _personas;
+            edificio = _edificio;
+            currentUser = _currentUser;
+
 
             //ACCESORIOS DISPONIBLES
             accesoriosBinding.DataSource = edificio.accesorios;
@@ -128,7 +139,9 @@ namespace WindowsFormsApp4
 
             if (salaArrendada.Count == 1)
             {
+                salaArrendada[0].Rut = currentUser.rut;
                 edificio.salasNo.Add(salaArrendada[0]);
+                
                 edificio.salas.Remove(salaArrendada[0]);
                 salasBinding.ResetBindings(false);
             }
@@ -159,6 +172,19 @@ namespace WindowsFormsApp4
         private void Menu_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void BCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            th = new Thread(openLogin);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+
+        private void openLogin()
+        {
+            Application.Run(new Login(credenciales, personas, edificio, currentUser));
         }
     }
 }

@@ -15,14 +15,18 @@ namespace WindowsFormsApp4
     public partial class Login : Form
     {
         Thread th;
-        public static List<ClassLibrary2.Credencial> credenciales = new List<ClassLibrary2.Credencial>();
-        public List<ClassLibrary2.Persona> personas = new List<ClassLibrary2.Persona>();
+        public static List<Credencial> credenciales;
+        public List<Persona> personas;
+        public Edificio edificio;
+        public Persona currentUser;
 
-        public Login(List<Credencial> _credenciales,List<Persona>_personas)
+        public Login(List<Credencial> _credenciales,List<Persona>_personas, Edificio _edificio, Persona _currentUser)
         {
             InitializeComponent();
             credenciales = _credenciales;
             personas = _personas;
+            edificio = _edificio;
+            currentUser = new Persona("", "", "", "");
         }
 
         #region Botones Login
@@ -45,15 +49,41 @@ namespace WindowsFormsApp4
                     {
                         if (c.acceso == "ADMIN")
                         {
+                            foreach (Credencial crec in credenciales)
+                            {
+                                if (password == crec.password)
+                                {
+                                    foreach (Persona p in personas)
+                                    {
+                                        if (p.rut == crec.rut)
+                                        {
+                                            currentUser = p;
+                                        }
+                                    }
+                                }
+                            }
                             this.Close();
-                            th = new Thread(openMenuAdmin);
+                            th = new Thread(openMenuAdmin); //Definir el currentUser para enviar al menuadmin TODO
                             th.SetApartmentState(ApartmentState.STA);
                             th.Start();
                         }
                         else
                         {
+                            foreach (Credencial crec in credenciales)
+                            {
+                                if (password == crec.password)
+                                {
+                                    foreach (Persona p in personas)
+                                    {
+                                        if (p.rut == crec.rut)
+                                        {
+                                            currentUser = p;
+                                        }
+                                    }
+                                }
+                            }
                             this.Close();
-                            th = new Thread(openMenuAlumnos);
+                            th = new Thread(openMenuAlumnos); //Definir el currentUser para enviar al menualumnos TODO
                             th.SetApartmentState(ApartmentState.STA);
                             th.Start();
                         }
@@ -81,23 +111,18 @@ namespace WindowsFormsApp4
         private void openMenuAlumnos()
         {
             {
-                Application.Run(new Menu());
+                Application.Run(new Menu(credenciales,personas,edificio,currentUser));
             }
         }//Abrira el Menu de alumnos y profesores
         private void openMenuCuenta()
                 {
-                    Application.Run(new MenuCuenta(credenciales,personas));
+                    Application.Run(new MenuCuenta(credenciales,personas,edificio, currentUser));
                 }//Abrira el Menu Para crear una nueva cuenta
         private void openMenuAdmin()
         {
-            Application.Run(new MenuAdmin());
-        }
+            Application.Run(new MenuAdmin(credenciales,personas,edificio,currentUser));
+        }//Abrir el Menu exclusivamente de admin
 
         #endregion
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

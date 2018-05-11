@@ -15,26 +15,48 @@ namespace WindowsFormsApp4
     public partial class InicialRun : Form
     {
         Thread th;
-        public static List<ClassLibrary2.Credencial> credenciales = new List<ClassLibrary2.Credencial>();
-        public List<ClassLibrary2.Persona> personas = new List<ClassLibrary2.Persona>();
+        public static List<Credencial> credenciales;
+        public static List<Persona> personas;
+        public Edificio edificio;
+        public Persona currentUser;
         public InicialRun()
         {
             InitializeComponent();
+            credenciales = new List<Credencial>();
+            personas = new List<Persona>();
+            edificio = new Edificio();
+            currentUser = new Persona("", "", "", "");
             setupData();
         }
 
         private void openLogin()
         {
-            Application.Run(new Login(credenciales, personas));
+            Application.Run(new Login(credenciales, personas, edificio, currentUser));
         }
 
         private void setupData()
         {
-            credenciales.Add(new ClassLibrary2.Credencial("alumno", "pass", "ALUMNO", "112223334"));
-            credenciales.Add(new ClassLibrary2.Credencial("admin", "pass", "ADMIN", "223334445"));
+            credenciales.Add(new Credencial("alumno", "pass", "ALUMNO", "112223334"));
+            credenciales.Add(new Credencial("admin", "pass", "ADMIN", "223334445"));
 
             personas.Add(new ClassLibrary2.Estudiante("Sebastian", "Gonzalez", "slgonzalez@miuandes.cl", "Ingenieria", "112223334"));
             personas.Add(new ClassLibrary2.Persona("Exequiel", "Vial", "ejvial@miuandes", "223334445"));
+
+            edificio.salas.Add(new Sala { ID = 2001 });
+            edificio.salas.Add(new Sala { ID = 2002 });
+            edificio.salas.Add(new Sala { ID = 2003 });
+            edificio.salas.Add(new Sala { ID = 2004 });
+            edificio.salas.Add(new Sala { ID = 2005 });
+            edificio.salas.Add(new Sala { ID = 2006 });
+
+            edificio.accesorios.Add(new Accesorio { nombre = "Computador", valor = 2000 });
+            edificio.accesorios.Add(new Accesorio { nombre = "Plumon", valor = 1000 });
+            edificio.accesorios.Add(new Accesorio { nombre = "Pizzara", valor = 500 });
+            edificio.accesorios.Add(new Accesorio { nombre = "Pizza", valor = 10000 });
+
+            edificio.Nombre = "Biblioteca";
+
+            currentUser = new Persona("", "", "", "");
         }
 
         private void button1_Click(object sender, EventArgs e)

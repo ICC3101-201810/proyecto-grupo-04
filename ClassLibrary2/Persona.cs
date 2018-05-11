@@ -20,5 +20,13 @@ namespace ClassLibrary2
             this.email = email;
             this.rut = rut;
         }
+
+        public string DisplayAlumno
+        {
+            get
+            {
+                return string.Format("{0} {1} - {2}", nombre, apellido, Convert.ToInt32(rut));
+            }
+        }
     }
 }

@@ -39,10 +39,9 @@
             // 
             // BLogin
             // 
-            this.BLogin.Location = new System.Drawing.Point(16, 305);
-            this.BLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BLogin.Location = new System.Drawing.Point(12, 248);
             this.BLogin.Name = "BLogin";
-            this.BLogin.Size = new System.Drawing.Size(140, 53);
+            this.BLogin.Size = new System.Drawing.Size(105, 43);
             this.BLogin.TabIndex = 0;
             this.BLogin.Text = "Login";
             this.BLogin.UseVisualStyleBackColor = true;
@@ -50,10 +49,9 @@
             // 
             // BSalir
             // 
-            this.BSalir.Location = new System.Drawing.Point(169, 305);
-            this.BSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BSalir.Location = new System.Drawing.Point(127, 248);
             this.BSalir.Name = "BSalir";
-            this.BSalir.Size = new System.Drawing.Size(140, 53);
+            this.BSalir.Size = new System.Drawing.Size(105, 43);
             this.BSalir.TabIndex = 1;
             this.BSalir.Text = "Salir";
             this.BSalir.UseVisualStyleBackColor = true;
@@ -62,10 +60,9 @@
             // LLCrearCuenta
             // 
             this.LLCrearCuenta.AutoSize = true;
-            this.LLCrearCuenta.Location = new System.Drawing.Point(111, 378);
-            this.LLCrearCuenta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LLCrearCuenta.Location = new System.Drawing.Point(83, 307);
             this.LLCrearCuenta.Name = "LLCrearCuenta";
-            this.LLCrearCuenta.Size = new System.Drawing.Size(92, 17);
+            this.LLCrearCuenta.Size = new System.Drawing.Size(69, 13);
             this.LLCrearCuenta.TabIndex = 2;
             this.LLCrearCuenta.TabStop = true;
             this.LLCrearCuenta.Text = "Crear Cuenta";
@@ -74,50 +71,46 @@
             // TBUsername
             // 
             this.TBUsername.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.TBUsername.Location = new System.Drawing.Point(16, 73);
-            this.TBUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TBUsername.Location = new System.Drawing.Point(12, 59);
             this.TBUsername.Name = "TBUsername";
-            this.TBUsername.Size = new System.Drawing.Size(289, 22);
+            this.TBUsername.Size = new System.Drawing.Size(218, 20);
             this.TBUsername.TabIndex = 3;
             // 
             // TBPassword
             // 
             this.TBPassword.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.TBPassword.Location = new System.Drawing.Point(16, 165);
-            this.TBPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TBPassword.Location = new System.Drawing.Point(12, 134);
             this.TBPassword.Name = "TBPassword";
-            this.TBPassword.Size = new System.Drawing.Size(289, 22);
+            this.TBPassword.Size = new System.Drawing.Size(218, 20);
             this.TBPassword.TabIndex = 4;
             // 
             // LUsername
             // 
             this.LUsername.AutoSize = true;
             this.LUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LUsername.Location = new System.Drawing.Point(16, 44);
-            this.LUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LUsername.Location = new System.Drawing.Point(12, 36);
             this.LUsername.Name = "LUsername";
-            this.LUsername.Size = new System.Drawing.Size(110, 25);
+            this.LUsername.Size = new System.Drawing.Size(91, 20);
             this.LUsername.TabIndex = 5;
             this.LUsername.Text = "Username";
             // 
             // LPassword
             // 
             this.LPassword.AutoSize = true;
-            this.LPassword.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LPassword.Location = new System.Drawing.Point(16, 137);
-            this.LPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LPassword.Location = new System.Drawing.Point(12, 111);
             this.LPassword.Name = "LPassword";
-            this.LPassword.Size = new System.Drawing.Size(113, 26);
+            this.LPassword.Size = new System.Drawing.Size(86, 20);
             this.LPassword.TabIndex = 6;
             this.LPassword.Text = "Password";
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.FondoLogin;
-            this.ClientSize = new System.Drawing.Size(321, 405);
+            this.ClientSize = new System.Drawing.Size(241, 329);
             this.Controls.Add(this.LPassword);
             this.Controls.Add(this.LUsername);
             this.Controls.Add(this.TBPassword);
@@ -125,11 +118,11 @@
             this.Controls.Add(this.LLCrearCuenta);
             this.Controls.Add(this.BSalir);
             this.Controls.Add(this.BLogin);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
             this.Name = "Login";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

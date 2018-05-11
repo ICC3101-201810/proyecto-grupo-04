@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using ClassLibrary2;
 
 namespace WindowsFormsApp4
 {
@@ -15,15 +16,16 @@ namespace WindowsFormsApp4
     {
         Thread th;
         int cont = 0;
+        public static List<Credencial> credenciales;
+        public List<Persona> personas;
+        public Edificio edificio;
+        public Persona currentUser;
 
-        public static List<ClassLibrary2.Credencial> credenciales = new List<ClassLibrary2.Credencial>();
-        public List<ClassLibrary2.Persona> personas = new List<ClassLibrary2.Persona>();
 
-
-        public MenuCuenta(List<ClassLibrary2.Credencial> _credencials, List<ClassLibrary2.Persona> _personas)
+        public MenuCuenta(List<Credencial> _credenciales, List<Persona> _personas, Edificio _edificio, Persona _currentUser)
         {
             InitializeComponent();
-            credenciales = _credencials;
+            credenciales = _credenciales;
             personas = _personas;
         }
         private void BAceptar_Click(object sender, EventArgs e)
@@ -90,7 +92,7 @@ namespace WindowsFormsApp4
 
         private void openLogin()
         {
-            Application.Run(new Login(credenciales,personas));
+            Application.Run(new Login(credenciales,personas, edificio, currentUser));
         }
 
         private void setupData()

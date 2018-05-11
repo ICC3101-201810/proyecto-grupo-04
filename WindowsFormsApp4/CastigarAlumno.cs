@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
 using System.Threading;
+using ClassLibrary2;
 
 namespace WindowsFormsApp4
 {
@@ -17,7 +18,11 @@ namespace WindowsFormsApp4
     {
         Thread th;
         List<CheckBox> CheckBoxes = new List<CheckBox>();
-        public CastigarAlumno()
+        public static List<Credencial> credenciales;
+        public List<Persona> personas;
+        public Edificio edificio;
+        public Persona currentUser;
+        public CastigarAlumno(List<Credencial> _credenciales, List<Persona> _personas, Edificio _edificio, Persona _currentUser)
         {
             InitializeComponent();
 
@@ -25,6 +30,11 @@ namespace WindowsFormsApp4
             CheckBoxes.Add(CBNoDevolvioAccesorio);
             CheckBoxes.Add(CBSalaMalEstado);
             CheckBoxes.Add(CBDevolvioSalaSucia);
+
+            credenciales = _credenciales;
+            personas = _personas;
+            edificio = _edificio;
+            currentUser = _currentUser;
         }
         
         private void BAceptar_Click(object sender, EventArgs e)
@@ -79,7 +89,7 @@ namespace WindowsFormsApp4
 
         private void openMenuAdmin()
         {
-            Application.Run(new MenuAdmin());
+            Application.Run(new MenuAdmin(credenciales, personas, edificio, currentUser));
         }
     }
 }

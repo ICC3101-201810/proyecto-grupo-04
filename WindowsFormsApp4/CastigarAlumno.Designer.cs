@@ -156,7 +156,9 @@
             this.Controls.Add(this.LMailAlumno);
             this.Controls.Add(this.LRutAlumno);
             this.Controls.Add(this.LNombreAlumno);
+            this.MaximizeBox = false;
             this.Name = "CastigarAlumno";
+            this.ShowIcon = false;
             this.Text = "CastigarAlumno";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -204,7 +204,9 @@
             this.Controls.Add(this.LBSalasDisponibles);
             this.Controls.Add(this.LSalasNoDisponibles);
             this.Controls.Add(this.LSalasDisponibles);
+            this.MaximizeBox = false;
             this.Name = "MenuAdmin";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuAdmin";
             ((System.ComponentModel.ISupportInitialize)(this.PB1)).EndInit();

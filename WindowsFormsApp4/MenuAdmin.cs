@@ -8,19 +8,54 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using ClassLibrary2;
 
 namespace WindowsFormsApp4
 {
     public partial class MenuAdmin : Form
     {
         Thread th;
-        public static List<ClassLibrary2.Credencial> credenciales = new List<ClassLibrary2.Credencial>();
-        public List<ClassLibrary2.Persona> personas = new List<ClassLibrary2.Persona>();
-        public MenuAdmin()
-        {
+        public List<Persona> personas;
+        public List<Credencial> credenciales;
+        public Edificio edificio;
+        public Persona currentUser;
+        private List<Sala> salaNoDisponible = new List<Sala>();
+
+        BindingSource personasBinding = new BindingSource();
+        BindingSource salaNoDisponibleBinding = new BindingSource();
+        BindingSource salasBinding = new BindingSource();
+        BindingSource accesoriosBinding = new BindingSource();
+
+        public MenuAdmin(List<Credencial> _credenciales, List<Persona> _personas, Edificio _edificio, Persona _currentUser)
+        { 
             InitializeComponent();
-            credenciales = new List<ClassLibrary2.Credencial>();
-            personas= new List<ClassLibrary2.Persona>();
+            personas = _personas;
+            credenciales = _credenciales;
+            edificio = _edificio;
+            currentUser = _currentUser;
+            salaNoDisponible = edificio.salasNo;
+
+            //SALAS DISPONIBLES
+            personasBinding.DataSource = edificio.salas;
+            LBAlumnos.DataSource = salasBinding;
+
+            LBAlumnos.ValueMember = "DisplayAlumno";
+            LBAlumnos.DisplayMember = "DisplayAlumno";
+
+            //SALAS DISPONIBLES
+            salasBinding.DataSource = edificio.salas;
+            LBSalasDisponibles.DataSource = salasBinding;
+
+            LBSalasDisponibles.ValueMember = "Display";
+            LBSalasDisponibles.DisplayMember = "Display";
+
+            //Sala Arrendada
+            salaNoDisponibleBinding.DataSource = salaNoDisponible;
+            LBSalasNoDisponibles.DataSource = salaNoDisponible;
+
+            LBSalasNoDisponibles.ValueMember = "DisplayAdmin";
+            LBSalasNoDisponibles.DisplayMember = "DisplayAdmin";
+
         }
 
         private void BCerrarSesion_Click(object sender, EventArgs e)
@@ -33,7 +68,7 @@ namespace WindowsFormsApp4
 
         private void openLogin()
         {
-            Application.Run(new Login(credenciales,personas));
+            Application.Run(new Login(credenciales,personas, edificio, currentUser));
         }
 
         private void BCastigarAlumno_Click(object sender, EventArgs e)
@@ -58,7 +93,7 @@ namespace WindowsFormsApp4
 
         private void openCastigarAlumno()
         {
-            Application.Run(new CastigarAlumno());
+            Application.Run(new CastigarAlumno(credenciales, personas, edificio, currentUser));
         }
     }
 }

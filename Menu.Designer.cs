@@ -42,6 +42,7 @@
             this.SalaArrendadaL = new System.Windows.Forms.ListBox();
             this.TotalL = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.BCerrarSesion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FinalizarButton
@@ -60,14 +61,14 @@
             this.CarritoLabel.Location = new System.Drawing.Point(638, 124);
             this.CarritoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CarritoLabel.Name = "CarritoLabel";
-            this.CarritoLabel.Size = new System.Drawing.Size(70, 25);
+            this.CarritoLabel.Size = new System.Drawing.Size(56, 20);
             this.CarritoLabel.TabIndex = 18;
             this.CarritoLabel.Text = "Carrito";
             // 
             // Carrito
             // 
             this.Carrito.FormattingEnabled = true;
-            this.Carrito.ItemHeight = 25;
+            this.Carrito.ItemHeight = 20;
             this.Carrito.Location = new System.Drawing.Point(644, 170);
             this.Carrito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Carrito.Name = "Carrito";
@@ -79,14 +80,14 @@
             this.AccesoriosLabel.AutoSize = true;
             this.AccesoriosLabel.Location = new System.Drawing.Point(339, 124);
             this.AccesoriosLabel.Name = "AccesoriosLabel";
-            this.AccesoriosLabel.Size = new System.Drawing.Size(109, 25);
+            this.AccesoriosLabel.Size = new System.Drawing.Size(87, 20);
             this.AccesoriosLabel.TabIndex = 16;
             this.AccesoriosLabel.Text = "Accesorios";
             // 
             // ListaAcsesorios
             // 
             this.ListaAcsesorios.FormattingEnabled = true;
-            this.ListaAcsesorios.ItemHeight = 25;
+            this.ListaAcsesorios.ItemHeight = 20;
             this.ListaAcsesorios.Location = new System.Drawing.Point(344, 170);
             this.ListaAcsesorios.Name = "ListaAcsesorios";
             this.ListaAcsesorios.Size = new System.Drawing.Size(274, 304);
@@ -120,14 +121,14 @@
             this.SalaDisponibeLabel.Location = new System.Drawing.Point(39, 124);
             this.SalaDisponibeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SalaDisponibeLabel.Name = "SalaDisponibeLabel";
-            this.SalaDisponibeLabel.Size = new System.Drawing.Size(168, 25);
+            this.SalaDisponibeLabel.Size = new System.Drawing.Size(135, 20);
             this.SalaDisponibeLabel.TabIndex = 12;
             this.SalaDisponibeLabel.Text = "Salas Disponibles";
             // 
             // SalasDisponibles
             // 
             this.SalasDisponibles.FormattingEnabled = true;
-            this.SalasDisponibles.ItemHeight = 25;
+            this.SalasDisponibles.ItemHeight = 20;
             this.SalasDisponibles.Location = new System.Drawing.Point(44, 170);
             this.SalasDisponibles.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SalasDisponibles.Name = "SalasDisponibles";
@@ -142,7 +143,7 @@
             this.HeaderText.Location = new System.Drawing.Point(36, 20);
             this.HeaderText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HeaderText.Name = "HeaderText";
-            this.HeaderText.Size = new System.Drawing.Size(119, 46);
+            this.HeaderText.Size = new System.Drawing.Size(96, 37);
             this.HeaderText.TabIndex = 10;
             this.HeaderText.Text = "Menu";
             // 
@@ -151,26 +152,26 @@
             this.SalaArrendadaLabel.AutoSize = true;
             this.SalaArrendadaLabel.Location = new System.Drawing.Point(39, 506);
             this.SalaArrendadaLabel.Name = "SalaArrendadaLabel";
-            this.SalaArrendadaLabel.Size = new System.Drawing.Size(149, 25);
+            this.SalaArrendadaLabel.Size = new System.Drawing.Size(120, 20);
             this.SalaArrendadaLabel.TabIndex = 21;
             this.SalaArrendadaLabel.Text = "Sala Arrendada";
             // 
             // SalaArrendadaL
             // 
             this.SalaArrendadaL.FormattingEnabled = true;
-            this.SalaArrendadaL.ItemHeight = 25;
+            this.SalaArrendadaL.ItemHeight = 20;
             this.SalaArrendadaL.Location = new System.Drawing.Point(44, 553);
             this.SalaArrendadaL.Name = "SalaArrendadaL";
-            this.SalaArrendadaL.Size = new System.Drawing.Size(273, 29);
+            this.SalaArrendadaL.Size = new System.Drawing.Size(273, 24);
             this.SalaArrendadaL.TabIndex = 22;
             // 
             // TotalL
             // 
             this.TotalL.FormattingEnabled = true;
-            this.TotalL.ItemHeight = 25;
+            this.TotalL.ItemHeight = 20;
             this.TotalL.Location = new System.Drawing.Point(643, 553);
             this.TotalL.Name = "TotalL";
-            this.TotalL.Size = new System.Drawing.Size(273, 29);
+            this.TotalL.Size = new System.Drawing.Size(273, 24);
             this.TotalL.TabIndex = 23;
             // 
             // label1
@@ -178,17 +179,28 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(639, 506);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 25);
+            this.label1.Size = new System.Drawing.Size(44, 20);
             this.label1.TabIndex = 24;
             this.label1.Text = "Total";
             // 
+            // BCerrarSesion
+            // 
+            this.BCerrarSesion.Location = new System.Drawing.Point(553, 33);
+            this.BCerrarSesion.Name = "BCerrarSesion";
+            this.BCerrarSesion.Size = new System.Drawing.Size(115, 38);
+            this.BCerrarSesion.TabIndex = 25;
+            this.BCerrarSesion.Text = "Cerrar Session";
+            this.BCerrarSesion.UseVisualStyleBackColor = true;
+            this.BCerrarSesion.Click += new System.EventHandler(this.BCerrarSesion_Click);
+            // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(952, 709);
+            this.Controls.Add(this.BCerrarSesion);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TotalL);
             this.Controls.Add(this.SalaArrendadaL);
@@ -230,6 +242,7 @@
         private System.Windows.Forms.ListBox SalaArrendadaL;
         private System.Windows.Forms.ListBox TotalL;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BCerrarSesion;
     }
 }
 

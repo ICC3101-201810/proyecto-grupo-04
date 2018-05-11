@@ -9,6 +9,7 @@ namespace ClassLibrary2
     public class Sala
     {
         public int ID { get; set; }
+        public string Rut { get; set; }
      
         
         public string Display
@@ -16,6 +17,14 @@ namespace ClassLibrary2
             get
             {
                 return string.Format("{0} - {1}", ID, "Biblioteca");
+            }
+        }
+
+        public string DisplayAdmin
+        {
+            get
+            {
+                return string.Format("{0} - {1}, Rut {2}", ID, "Biblioteca",Rut);
             }
         }
     }

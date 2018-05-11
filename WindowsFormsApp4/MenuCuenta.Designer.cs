@@ -247,7 +247,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(512, 281);
             this.Controls.Add(this.GBMenuCuenta);
+            this.MaximizeBox = false;
             this.Name = "MenuCuenta";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuCuenta";
             ((System.ComponentModel.ISupportInitialize)(this.PBMenuCuenta)).EndInit();
