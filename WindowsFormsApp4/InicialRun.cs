@@ -25,7 +25,7 @@ namespace WindowsFormsApp4
             credenciales = new List<Credencial>();
             personas = new List<Persona>();
             edificio = new Edificio();
-            currentUser = new Persona("", "", "", "");
+            currentUser = new Persona();
             setupData();
         }
 
@@ -39,8 +39,8 @@ namespace WindowsFormsApp4
             credenciales.Add(new Credencial("alumno", "pass", "ALUMNO", "112223334"));
             credenciales.Add(new Credencial("admin", "pass", "ADMIN", "223334445"));
 
-            personas.Add(new ClassLibrary2.Estudiante("Sebastian", "Gonzalez", "slgonzalez@miuandes.cl", "Ingenieria", "112223334"));
-            personas.Add(new ClassLibrary2.Persona("Exequiel", "Vial", "ejvial@miuandes", "223334445"));
+            personas.Add(new Estudiante { nombre = "Sebastian", apellido = "Gonzalez", email = "slgonzalez@miuandes.cl", carrera = "Ingenieria", rut = "112223334" });
+            personas.Add(new Persona { nombre = "Exequiel", apellido = "Vial", email = "ejvial@miuandes", rut = "223334445" });
 
             edificio.salas.Add(new Sala { ID = 2001 });
             edificio.salas.Add(new Sala { ID = 2002 });
@@ -56,7 +56,7 @@ namespace WindowsFormsApp4
 
             edificio.Nombre = "Biblioteca";
 
-            currentUser = new Persona("", "", "", "");
+            currentUser = new Persona();
         }
 
         private void button1_Click(object sender, EventArgs e)

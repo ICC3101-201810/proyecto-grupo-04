@@ -139,6 +139,7 @@ namespace WindowsFormsApp4
 
             if (salaArrendada.Count == 1)
             {
+
                 salaArrendada[0].Rut = currentUser.rut;
                 edificio.salasNo.Add(salaArrendada[0]);
                 

@@ -10,9 +10,5 @@ namespace ClassLibrary2
     {
         public string facultad { get; set; }
 
-        public Profesor(string nombre, string apellido, string email, string facultad, string rut) : base(nombre, apellido, email, rut)
-        {
-            this.facultad = facultad;
-        }
     }
 }

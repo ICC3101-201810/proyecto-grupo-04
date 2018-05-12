@@ -59,17 +59,17 @@ namespace WindowsFormsApp4
 
                     if (cargo == "ALUMNO") //Crea La nueva cuenta como Estudiante
                     {
-                        ClassLibrary2.Estudiante b = new ClassLibrary2.Estudiante(nombre, apellido, mail, multi, rut);
+                        ClassLibrary2.Estudiante b = new Estudiante {nombre=nombre,apellido= apellido,email= mail,carrera= multi,rut=rut };
                         personas.Add(b);
                     }
                     else if (cargo == "PROFESOR")//Crea La nueva cuenta como Profesor
                     {
-                        ClassLibrary2.Profesor b = new ClassLibrary2.Profesor(nombre, apellido, mail, multi, rut);
+                        ClassLibrary2.Profesor b = new Profesor {nombre= nombre,apellido= apellido,email= mail,facultad= multi,rut= rut };
                         personas.Add(b);
                     }
                     else if (cargo == "ADMIN")//Crea La nueva cuenta como Admin
                     {
-                        ClassLibrary2.Persona b = new ClassLibrary2.Persona(nombre, apellido, mail, rut);
+                        ClassLibrary2.Persona b = new Persona {nombre= nombre,apellido= apellido,email= mail,rut= rut };
                         personas.Add(b);
                     }
                 }
@@ -100,8 +100,8 @@ namespace WindowsFormsApp4
             credenciales.Add(new ClassLibrary2.Credencial("alumno", "pass", "ALUMNO", "112223334"));
             credenciales.Add(new ClassLibrary2.Credencial("admin", "pass", "ADMIN", "223334445"));
 
-            personas.Add(new ClassLibrary2.Estudiante("Sebastian", "Gonzalez", "slgonzalez@miuandes.cl", "Ingenieria", "112223334"));
-            personas.Add(new ClassLibrary2.Persona("Exequiel", "Vial", "ejvial@miuandes", "223334445"));
+            personas.Add(new Estudiante { nombre="Sebastian", apellido="Gonzalez", email="slgonzalez@miuandes.cl", carrera="Ingenieria",rut= "112223334" });
+            personas.Add(new Persona { nombre="Exequiel", apellido="Vial", email="ejvial@miuandes",rut= "223334445" });
         }
 
         private void TBRut_Enter(object sender, EventArgs e)

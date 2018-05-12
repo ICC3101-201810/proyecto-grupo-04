@@ -19,6 +19,7 @@ namespace WindowsFormsApp4
         public List<Credencial> credenciales;
         public Edificio edificio;
         public Persona currentUser;
+        public Persona alumnoCastigado;
         private List<Sala> salaNoDisponible = new List<Sala>();
 
         BindingSource personasBinding = new BindingSource();
@@ -35,9 +36,9 @@ namespace WindowsFormsApp4
             currentUser = _currentUser;
             salaNoDisponible = edificio.salasNo;
 
-            //SALAS DISPONIBLES
-            personasBinding.DataSource = edificio.salas;
-            LBAlumnos.DataSource = salasBinding;
+            //ALUMNOS
+            personasBinding.DataSource = personas;
+            LBAlumnos.DataSource = personasBinding;
 
             LBAlumnos.ValueMember = "DisplayAlumno";
             LBAlumnos.DisplayMember = "DisplayAlumno";
@@ -73,14 +74,23 @@ namespace WindowsFormsApp4
 
         private void BCastigarAlumno_Click(object sender, EventArgs e)
         {
+            Persona personaSelecionada = (Persona)LBAlumnos.SelectedItem;
             if (!LBAlumnos.Visible)
             {
                 LBAlumnos.Visible = true;
                 LAlumnos.Visible = true;
                 PB1.Visible = false;
             }
-            if (LBAlumnos.Text != "")
+            else if (LBAlumnos.Text != "")
             {
+                LBAlumnos.Text = "";
+                foreach (Persona p in personas)
+                {
+                    if (p.rut==personaSelecionada.rut)
+                    {
+                        alumnoCastigado = p;
+                    }
+                }
                 th = new Thread(openCastigarAlumno);
                 th.SetApartmentState(ApartmentState.STA);
                 th.Start();
@@ -93,7 +103,7 @@ namespace WindowsFormsApp4
 
         private void openCastigarAlumno()
         {
-            Application.Run(new CastigarAlumno(credenciales, personas, edificio, currentUser));
+            Application.Run(new CastigarAlumno(credenciales, personas, edificio, currentUser, alumnoCastigado));
         }
     }
 }

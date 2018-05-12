@@ -26,7 +26,7 @@ namespace WindowsFormsApp4
             credenciales = _credenciales;
             personas = _personas;
             edificio = _edificio;
-            currentUser = new Persona("", "", "", "");
+            currentUser = new Persona();
         }
 
         #region Botones Login

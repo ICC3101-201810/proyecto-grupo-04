@@ -22,7 +22,8 @@ namespace WindowsFormsApp4
         public List<Persona> personas;
         public Edificio edificio;
         public Persona currentUser;
-        public CastigarAlumno(List<Credencial> _credenciales, List<Persona> _personas, Edificio _edificio, Persona _currentUser)
+        public Persona alumnoCastigado;
+        public CastigarAlumno(List<Credencial> _credenciales, List<Persona> _personas, Edificio _edificio, Persona _currentUser, Persona _alumnoCastigado)
         {
             InitializeComponent();
 
@@ -35,6 +36,11 @@ namespace WindowsFormsApp4
             personas = _personas;
             edificio = _edificio;
             currentUser = _currentUser;
+            alumnoCastigado = _alumnoCastigado;
+
+            LNombreAlumno.Text = alumnoCastigado.nombre;
+            LRutAlumno.Text = alumnoCastigado.rut;
+            LMailAlumno.Text = alumnoCastigado.email;
         }
         
         private void BAceptar_Click(object sender, EventArgs e)

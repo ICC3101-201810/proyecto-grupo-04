@@ -49,68 +49,78 @@
             // LSalasDisponibles
             // 
             this.LSalasDisponibles.AutoSize = true;
-            this.LSalasDisponibles.Location = new System.Drawing.Point(191, 64);
+            this.LSalasDisponibles.Location = new System.Drawing.Point(255, 79);
+            this.LSalasDisponibles.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LSalasDisponibles.Name = "LSalasDisponibles";
-            this.LSalasDisponibles.Size = new System.Drawing.Size(90, 13);
+            this.LSalasDisponibles.Size = new System.Drawing.Size(120, 17);
             this.LSalasDisponibles.TabIndex = 0;
             this.LSalasDisponibles.Text = "Salas Disponibles";
             // 
             // LSalasNoDisponibles
             // 
             this.LSalasNoDisponibles.AutoSize = true;
-            this.LSalasNoDisponibles.Location = new System.Drawing.Point(374, 64);
+            this.LSalasNoDisponibles.Location = new System.Drawing.Point(499, 79);
+            this.LSalasNoDisponibles.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LSalasNoDisponibles.Name = "LSalasNoDisponibles";
-            this.LSalasNoDisponibles.Size = new System.Drawing.Size(109, 13);
+            this.LSalasNoDisponibles.Size = new System.Drawing.Size(145, 17);
             this.LSalasNoDisponibles.TabIndex = 1;
             this.LSalasNoDisponibles.Text = "Salas NO Disponibles";
             // 
             // LBSalasDisponibles
             // 
             this.LBSalasDisponibles.FormattingEnabled = true;
-            this.LBSalasDisponibles.Location = new System.Drawing.Point(194, 80);
+            this.LBSalasDisponibles.ItemHeight = 16;
+            this.LBSalasDisponibles.Location = new System.Drawing.Point(259, 98);
+            this.LBSalasDisponibles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LBSalasDisponibles.Name = "LBSalasDisponibles";
-            this.LBSalasDisponibles.Size = new System.Drawing.Size(174, 264);
+            this.LBSalasDisponibles.Size = new System.Drawing.Size(231, 324);
             this.LBSalasDisponibles.TabIndex = 2;
             // 
             // LBSalasNoDisponibles
             // 
             this.LBSalasNoDisponibles.FormattingEnabled = true;
-            this.LBSalasNoDisponibles.Location = new System.Drawing.Point(377, 80);
+            this.LBSalasNoDisponibles.ItemHeight = 16;
+            this.LBSalasNoDisponibles.Location = new System.Drawing.Point(503, 98);
+            this.LBSalasNoDisponibles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LBSalasNoDisponibles.Name = "LBSalasNoDisponibles";
-            this.LBSalasNoDisponibles.Size = new System.Drawing.Size(174, 264);
+            this.LBSalasNoDisponibles.Size = new System.Drawing.Size(231, 324);
             this.LBSalasNoDisponibles.TabIndex = 3;
             // 
             // PB1
             // 
-            this.PB1.Location = new System.Drawing.Point(5, 80);
+            this.PB1.Location = new System.Drawing.Point(7, 98);
+            this.PB1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PB1.Name = "PB1";
-            this.PB1.Size = new System.Drawing.Size(174, 264);
+            this.PB1.Size = new System.Drawing.Size(232, 325);
             this.PB1.TabIndex = 4;
             this.PB1.TabStop = false;
             // 
             // BCrearSala
             // 
-            this.BCrearSala.Location = new System.Drawing.Point(124, 350);
+            this.BCrearSala.Location = new System.Drawing.Point(165, 431);
+            this.BCrearSala.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BCrearSala.Name = "BCrearSala";
-            this.BCrearSala.Size = new System.Drawing.Size(99, 37);
+            this.BCrearSala.Size = new System.Drawing.Size(132, 46);
             this.BCrearSala.TabIndex = 2;
             this.BCrearSala.Text = "Crear Sala";
             this.BCrearSala.UseVisualStyleBackColor = true;
             // 
             // BBorrarSala
             // 
-            this.BBorrarSala.Location = new System.Drawing.Point(229, 350);
+            this.BBorrarSala.Location = new System.Drawing.Point(305, 431);
+            this.BBorrarSala.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BBorrarSala.Name = "BBorrarSala";
-            this.BBorrarSala.Size = new System.Drawing.Size(106, 37);
+            this.BBorrarSala.Size = new System.Drawing.Size(141, 46);
             this.BBorrarSala.TabIndex = 3;
             this.BBorrarSala.Text = "Borrar Sala";
             this.BBorrarSala.UseVisualStyleBackColor = true;
             // 
             // BCastigarAlumno
             // 
-            this.BCastigarAlumno.Location = new System.Drawing.Point(5, 350);
+            this.BCastigarAlumno.Location = new System.Drawing.Point(7, 431);
+            this.BCastigarAlumno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BCastigarAlumno.Name = "BCastigarAlumno";
-            this.BCastigarAlumno.Size = new System.Drawing.Size(113, 37);
+            this.BCastigarAlumno.Size = new System.Drawing.Size(151, 46);
             this.BCastigarAlumno.TabIndex = 1;
             this.BCastigarAlumno.Text = "Castigar Alumno";
             this.BCastigarAlumno.UseVisualStyleBackColor = true;
@@ -118,18 +128,20 @@
             // 
             // BDesocuparSala
             // 
-            this.BDesocuparSala.Location = new System.Drawing.Point(341, 350);
+            this.BDesocuparSala.Location = new System.Drawing.Point(455, 431);
+            this.BDesocuparSala.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BDesocuparSala.Name = "BDesocuparSala";
-            this.BDesocuparSala.Size = new System.Drawing.Size(110, 37);
+            this.BDesocuparSala.Size = new System.Drawing.Size(147, 46);
             this.BDesocuparSala.TabIndex = 4;
             this.BDesocuparSala.Text = "Desocupar Sala";
             this.BDesocuparSala.UseVisualStyleBackColor = true;
             // 
             // BCerrarSesion
             // 
-            this.BCerrarSesion.Location = new System.Drawing.Point(457, 350);
+            this.BCerrarSesion.Location = new System.Drawing.Point(609, 431);
+            this.BCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BCerrarSesion.Name = "BCerrarSesion";
-            this.BCerrarSesion.Size = new System.Drawing.Size(94, 37);
+            this.BCerrarSesion.Size = new System.Drawing.Size(125, 46);
             this.BCerrarSesion.TabIndex = 5;
             this.BCerrarSesion.Text = "Cerrar Sesion";
             this.BCerrarSesion.UseVisualStyleBackColor = true;
@@ -139,56 +151,59 @@
             // 
             this.HeaderText.AutoSize = true;
             this.HeaderText.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.HeaderText.Location = new System.Drawing.Point(13, 9);
-            this.HeaderText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.HeaderText.Location = new System.Drawing.Point(17, 11);
+            this.HeaderText.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.HeaderText.Name = "HeaderText";
-            this.HeaderText.Size = new System.Drawing.Size(197, 37);
+            this.HeaderText.Size = new System.Drawing.Size(243, 46);
             this.HeaderText.TabIndex = 10;
             this.HeaderText.Text = "Menu Admin";
             // 
             // LUserInfo
             // 
             this.LUserInfo.AutoSize = true;
-            this.LUserInfo.Location = new System.Drawing.Point(13, 66);
+            this.LUserInfo.Location = new System.Drawing.Point(17, 81);
+            this.LUserInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LUserInfo.Name = "LUserInfo";
-            this.LUserInfo.Size = new System.Drawing.Size(0, 13);
+            this.LUserInfo.Size = new System.Drawing.Size(0, 17);
             this.LUserInfo.TabIndex = 11;
             // 
             // LNombreAdmin
             // 
             this.LNombreAdmin.AutoSize = true;
-            this.LNombreAdmin.Location = new System.Drawing.Point(217, 27);
+            this.LNombreAdmin.Location = new System.Drawing.Point(289, 33);
+            this.LNombreAdmin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LNombreAdmin.Name = "LNombreAdmin";
-            this.LNombreAdmin.Size = new System.Drawing.Size(116, 13);
+            this.LNombreAdmin.Size = new System.Drawing.Size(146, 17);
             this.LNombreAdmin.TabIndex = 12;
             this.LNombreAdmin.Text = "NOMBRE DEL ADMIN";
             // 
             // LBAlumnos
             // 
             this.LBAlumnos.FormattingEnabled = true;
-            this.LBAlumnos.Items.AddRange(new object[] {
-            "Alumno 1"});
-            this.LBAlumnos.Location = new System.Drawing.Point(5, 80);
+            this.LBAlumnos.ItemHeight = 16;
+            this.LBAlumnos.Location = new System.Drawing.Point(7, 98);
+            this.LBAlumnos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LBAlumnos.Name = "LBAlumnos";
-            this.LBAlumnos.Size = new System.Drawing.Size(174, 264);
+            this.LBAlumnos.Size = new System.Drawing.Size(231, 324);
             this.LBAlumnos.TabIndex = 13;
             this.LBAlumnos.Visible = false;
             // 
             // LAlumnos
             // 
             this.LAlumnos.AutoSize = true;
-            this.LAlumnos.Location = new System.Drawing.Point(2, 64);
+            this.LAlumnos.Location = new System.Drawing.Point(3, 79);
+            this.LAlumnos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LAlumnos.Name = "LAlumnos";
-            this.LAlumnos.Size = new System.Drawing.Size(47, 13);
+            this.LAlumnos.Size = new System.Drawing.Size(62, 17);
             this.LAlumnos.TabIndex = 14;
             this.LAlumnos.Text = "Alumnos";
             this.LAlumnos.Visible = false;
             // 
             // MenuAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 393);
+            this.ClientSize = new System.Drawing.Size(745, 484);
             this.Controls.Add(this.LAlumnos);
             this.Controls.Add(this.LBAlumnos);
             this.Controls.Add(this.LNombreAdmin);
@@ -204,6 +219,7 @@
             this.Controls.Add(this.LBSalasDisponibles);
             this.Controls.Add(this.LSalasNoDisponibles);
             this.Controls.Add(this.LSalasDisponibles);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "MenuAdmin";
             this.ShowIcon = false;

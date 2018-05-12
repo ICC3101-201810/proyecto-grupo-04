@@ -10,9 +10,8 @@ namespace ClassLibrary2
     {
         public string carrera{ get; set; }
 
-        public Estudiante(string nombre, string apellido, string email, string carrera, string rut) : base(nombre, apellido, email, rut)
-        {
-            this.carrera = carrera;
-        }
+
     }
+
+
 }

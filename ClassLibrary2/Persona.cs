@@ -13,19 +13,12 @@ namespace ClassLibrary2
         public string email { get; set; }
         public string rut { get; set; }
 
-        public Persona(string nombre, string apellido, string email, string rut)
-        {
-            this.nombre = nombre;
-            this.apellido = apellido;
-            this.email = email;
-            this.rut = rut;
-        }
 
         public string DisplayAlumno
         {
             get
             {
-                return string.Format("{0} {1} - {2}", nombre, apellido, Convert.ToInt32(rut));
+                return string.Format("{0} - {1}", nombre, rut);
             }
         }
     }
