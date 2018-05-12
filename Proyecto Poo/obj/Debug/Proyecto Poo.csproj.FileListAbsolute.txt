@@ -1,7 +1,0 @@
-C:\Users\kitor\OneDrive\Desktop\Proyecto Poo\Proyecto Poo\bin\Debug\Proyecto Poo.exe.config
-C:\Users\kitor\OneDrive\Desktop\Proyecto Poo\Proyecto Poo\bin\Debug\Proyecto Poo.exe
-C:\Users\kitor\OneDrive\Desktop\Proyecto Poo\Proyecto Poo\bin\Debug\Proyecto Poo.pdb
-C:\Users\kitor\OneDrive\Desktop\Proyecto Poo\Proyecto Poo\obj\Debug\Proyecto Poo.csprojResolveAssemblyReference.cache
-C:\Users\kitor\OneDrive\Desktop\Proyecto Poo\Proyecto Poo\obj\Debug\Proyecto Poo.csproj.CoreCompileInputs.cache
-C:\Users\kitor\OneDrive\Desktop\Proyecto Poo\Proyecto Poo\obj\Debug\Proyecto Poo.exe
-C:\Users\kitor\OneDrive\Desktop\Proyecto Poo\Proyecto Poo\obj\Debug\Proyecto Poo.pdb
