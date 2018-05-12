@@ -51,8 +51,8 @@ namespace WindowsFormsApp4
             LBSalasDisponibles.DisplayMember = "Display";
 
             //Sala Arrendada
-            salaNoDisponibleBinding.DataSource = edificio.salas;
-            LBSalasNoDisponibles.DataSource = edificio.salas;
+            salaNoDisponibleBinding.DataSource = edificio.salasNo;
+            LBSalasNoDisponibles.DataSource = edificio.salasNo;
 
             LBSalasNoDisponibles.ValueMember = "DisplayAdmin";
             LBSalasNoDisponibles.DisplayMember = "DisplayAdmin";
@@ -124,9 +124,11 @@ namespace WindowsFormsApp4
         {
             Sala SalaSelecionada = (Sala)LBSalasNoDisponibles.SelectedItem;
             edificio.salas.Add(SalaSelecionada);
+          
             edificio.salasNo.Remove(SalaSelecionada);
             salasBinding.ResetBindings(false);
             salaNoDisponibleBinding.ResetBindings(false);
+
         }
     }
 }

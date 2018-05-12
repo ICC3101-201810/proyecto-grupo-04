@@ -48,7 +48,13 @@ namespace WindowsFormsApp4
             {
                 edificio.salas.Add(new Sala { ID = contadorSala });
             }
-            
+
+            edificio.salasNo.Add(new Sala { ID = 78 });
+            edificio.salasNo.Add(new Sala { ID = 98 });
+            edificio.salasNo.Add(new Sala { ID = 28 });
+            edificio.salasNo.Add(new Sala { ID = 88 });
+
+
 
             edificio.accesoriosAlumno.Add(new Accesorio { nombre = "Computador", valor = 2000 });
             edificio.accesoriosAlumno.Add(new Accesorio { nombre = "Plumon", valor = 1000 });
