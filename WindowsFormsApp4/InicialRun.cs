@@ -41,18 +41,13 @@ namespace WindowsFormsApp4
             credenciales.Add(new Credencial("alumno", "pass", "ALUMNO", "112223334"));
             credenciales.Add(new Credencial("admin", "passs", "ADMIN", "223334445"));
 
-            personas.Add(new Estudiante { nombre = "Sebastian", apellido = "Gonzalez", email = "slgonzalez@miuandes.cl", carrera = "Ingenieria", rut = "112223334",cargo="ALUMNO"});
+            personas.Add(new Estudiante { nombre = "Sebastian", apellido = "Gonzalez", email = "erriveros@miuandes.cl", carrera = "Ingenieria", rut = "112223334",cargo="ALUMNO"});
             personas.Add(new Persona { nombre = "Exequiel", apellido = "Vial", email = "ejvial@miuandes", rut = "223334445" });
 
             for (;contadorSala<6;contadorSala++)
             {
                 edificio.salas.Add(new Sala { ID = contadorSala });
             }
-
-            edificio.salasNo.Add(new Sala { ID = 78 });
-            edificio.salasNo.Add(new Sala { ID = 98 });
-            edificio.salasNo.Add(new Sala { ID = 28 });
-            edificio.salasNo.Add(new Sala { ID = 88 });
 
 
 

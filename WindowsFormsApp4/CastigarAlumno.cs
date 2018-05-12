@@ -49,19 +49,33 @@ namespace WindowsFormsApp4
         {
             if (CBNoDevolvioSala.Checked || CBNoDevolvioAccesorio.Checked || CBSalaMalEstado.Checked || CBDevolvioSalaSucia.Checked)
             {
-                MessageBox.Show("entra");
-                /*
                 string de, clave, para, asunto, cuerpo;
-                
-                Console.WriteLine("Ahora ingrese sus datos para enviarle un mail para confirmar su arriendo");
                 de = "salasuandes@gmail.com";
                 clave = "salasuandes123";
                 Console.WriteLine("Correo: ");
-                para = Console.ReadLine();
-                Console.Clear();
+                para = alumnoCastigado.email;
                 asunto = "Multa por uso indebido de Sala";
-                cuerpo = "Estimado alumno usted ha arrendado la sala de estudio le recordamos que debe dejar la sala limpia y ordenada y debe devolverla luego de 1 hora y media, de lo contrario será multado. ";
-                Console.Clear();
+                cuerpo = "Estimado Alumno Usted ha sido multado bajo los siguientes criterios /n";
+                if (CBNoDevolvioSala.Checked)
+                {
+                    cuerpo = cuerpo + "No Devolvio sala\n";
+
+                }
+                if (CBNoDevolvioAccesorio.Checked)
+                {
+                    cuerpo = cuerpo + "No Devolvio Accesorio\n";
+
+                }
+                if (CBSalaMalEstado.Checked)
+                {
+                    cuerpo = cuerpo + "Devolvio Sala En mal estado\n";
+
+                }
+                if (CBDevolvioSalaSucia.Checked)
+                {
+                    cuerpo = cuerpo + "Devolvio Sala Sucia\n";
+
+                }
                 using (SmtpClient comprobar = new SmtpClient("Smtp.gmail.com", 25))
                 {
                     MailMessage mensaje = new MailMessage(de, para, asunto, cuerpo);
@@ -70,19 +84,14 @@ namespace WindowsFormsApp4
                     try
                     {
                         comprobar.Send(mensaje);
-                        Console.Clear();
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("Enviado correctamente!");
+                        MessageBox.Show("Mail enviado con exito");
 
                     }
                     catch (Exception ex)
                     {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.Clear();
-                        Console.WriteLine("Error, mensaje: " + ex.Message);
+                        MessageBox.Show(ex.Message);
                     }
                 }
-                */
                 this.Close();
                 th = new Thread(openMenuAdmin);
                 th.SetApartmentState(ApartmentState.STA);
