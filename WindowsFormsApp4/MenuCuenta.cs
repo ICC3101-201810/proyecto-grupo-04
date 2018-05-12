@@ -20,13 +20,14 @@ namespace WindowsFormsApp4
         public List<Persona> personas;
         public Edificio edificio;
         public Persona currentUser;
+        public int contador;
 
-
-        public MenuCuenta(List<Credencial> _credenciales, List<Persona> _personas, Edificio _edificio, Persona _currentUser)
+        public MenuCuenta(List<Credencial> _credenciales, List<Persona> _personas, Edificio _edificio, Persona _currentUser, int _contador)
         {
             InitializeComponent();
             credenciales = _credenciales;
             personas = _personas;
+            contador = _contador;
         }
         private void BAceptar_Click(object sender, EventArgs e)
         {
@@ -59,17 +60,17 @@ namespace WindowsFormsApp4
 
                     if (cargo == "ALUMNO") //Crea La nueva cuenta como Estudiante
                     {
-                        ClassLibrary2.Estudiante b = new Estudiante {nombre=nombre,apellido= apellido,email= mail,carrera= multi,rut=rut };
+                        Estudiante b = new Estudiante {nombre=nombre,apellido= apellido,email= mail,carrera= multi,rut=rut,cargo="ALUMNO" };
                         personas.Add(b);
                     }
                     else if (cargo == "PROFESOR")//Crea La nueva cuenta como Profesor
                     {
-                        ClassLibrary2.Profesor b = new Profesor {nombre= nombre,apellido= apellido,email= mail,facultad= multi,rut= rut };
+                        Profesor b = new Profesor {nombre= nombre,apellido= apellido,email= mail,facultad= multi,rut= rut ,cargo="PROFESOR"};
                         personas.Add(b);
                     }
                     else if (cargo == "ADMIN")//Crea La nueva cuenta como Admin
                     {
-                        ClassLibrary2.Persona b = new Persona {nombre= nombre,apellido= apellido,email= mail,rut= rut };
+                        Persona b = new Persona {nombre= nombre,apellido= apellido,email= mail,rut= rut,cargo="ADMIN" };
                         personas.Add(b);
                     }
                 }
@@ -92,7 +93,7 @@ namespace WindowsFormsApp4
 
         private void openLogin()
         {
-            Application.Run(new Login(credenciales,personas, edificio, currentUser));
+            Application.Run(new Login(credenciales,personas, edificio, currentUser,contador));
         }
 
         private void setupData()

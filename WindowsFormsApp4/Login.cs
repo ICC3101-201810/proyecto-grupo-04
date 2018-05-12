@@ -19,14 +19,16 @@ namespace WindowsFormsApp4
         public List<Persona> personas;
         public Edificio edificio;
         public Persona currentUser;
+        public int contadorSala;
 
-        public Login(List<Credencial> _credenciales,List<Persona>_personas, Edificio _edificio, Persona _currentUser)
+        public Login(List<Credencial> _credenciales,List<Persona>_personas, Edificio _edificio, Persona _currentUser, int _contador)
         {
             InitializeComponent();
             credenciales = _credenciales;
             personas = _personas;
             edificio = _edificio;
             currentUser = new Persona();
+            contadorSala = _contador;
         }
 
         #region Botones Login
@@ -111,16 +113,16 @@ namespace WindowsFormsApp4
         private void openMenuAlumnos()
         {
             {
-                Application.Run(new Menu(credenciales,personas,edificio,currentUser));
+                Application.Run(new Menu(credenciales,personas,edificio,currentUser,contadorSala));
             }
         }//Abrira el Menu de alumnos y profesores
         private void openMenuCuenta()
                 {
-                    Application.Run(new MenuCuenta(credenciales,personas,edificio, currentUser));
+                    Application.Run(new MenuCuenta(credenciales,personas,edificio, currentUser,contadorSala));
                 }//Abrira el Menu Para crear una nueva cuenta
         private void openMenuAdmin()
         {
-            Application.Run(new MenuAdmin(credenciales,personas,edificio,currentUser));
+            Application.Run(new MenuAdmin(credenciales,personas,edificio,currentUser,contadorSala));
         }//Abrir el Menu exclusivamente de admin
 
         #endregion

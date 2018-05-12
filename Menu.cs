@@ -33,7 +33,9 @@ namespace WindowsFormsApp4
 
         BindingSource salasBinding = new BindingSource();
         BindingSource accesoriosBinding = new BindingSource();
-        public Menu(List<Credencial> _credenciales, List<Persona> _personas, Edificio _edificio, Persona _currentUser)
+
+        public int contador;
+        public Menu(List<Credencial> _credenciales, List<Persona> _personas, Edificio _edificio, Persona _currentUser, int _contador)
         {
             InitializeComponent();
 
@@ -41,14 +43,28 @@ namespace WindowsFormsApp4
             personas = _personas;
             edificio = _edificio;
             currentUser = _currentUser;
+            contador = _contador;
 
 
-            //ACCESORIOS DISPONIBLES
-            accesoriosBinding.DataSource = edificio.accesorios;
-            ListaAcsesorios.DataSource = accesoriosBinding;
+            //ACCESORIOS DISPONIBLES ALUMNOS
+            if (currentUser.cargo == "ALUMNO")
+            {
+                accesoriosBinding.DataSource = edificio.accesoriosAlumno;
+                ListaAcsesorios.DataSource = accesoriosBinding;
 
-            ListaAcsesorios.DisplayMember = "DisplayA";
-            ListaAcsesorios.ValueMember = "DisplayA";
+                ListaAcsesorios.DisplayMember = "DisplayA";
+                ListaAcsesorios.ValueMember = "DisplayA";
+            }
+
+            //ACCESORIOS DISPONIBLES PROFESOR
+            if (currentUser.cargo == "PROFESOR")
+            {
+                accesoriosBinding.DataSource = edificio.accesoriosProfessor;
+                ListaAcsesorios.DataSource = accesoriosBinding;
+
+                ListaAcsesorios.DisplayMember = "DisplayA";
+                ListaAcsesorios.ValueMember = "DisplayA";
+            }
 
             //SALAS DISPONIBLES
             salasBinding.DataSource = edificio.salas;
@@ -77,23 +93,6 @@ namespace WindowsFormsApp4
 
             SalaArrendadaL.ValueMember = "Display";
             
-        }
-
-        private void SetupData()
-        {
-            edificio.salas.Add(new Sala { ID = 2001 });
-            edificio.salas.Add(new Sala { ID = 2002 });
-            edificio.salas.Add(new Sala { ID = 2003 });
-            edificio.salas.Add(new Sala { ID = 2004 });
-            edificio.salas.Add(new Sala { ID = 2005 });
-            edificio.salas.Add(new Sala { ID = 2006 });
-
-            edificio.accesorios.Add(new Accesorio { nombre = "Computador", valor = 2000 });
-            edificio.accesorios.Add(new Accesorio { nombre = "Plumon", valor = 1000 });
-            edificio.accesorios.Add(new Accesorio { nombre = "Pizzara", valor= 500 });
-            edificio.accesorios.Add(new Accesorio { nombre = "Pizza" ,valor= 10000});
-
-            edificio.Nombre = "Biblioteca";
         }
 
         private void SalasDisponibles_SelectedIndexChanged(object sender, EventArgs e)
@@ -185,7 +184,7 @@ namespace WindowsFormsApp4
 
         private void openLogin()
         {
-            Application.Run(new Login(credenciales, personas, edificio, currentUser));
+            Application.Run(new Login(credenciales, personas, edificio, currentUser, contador));
         }
     }
 }

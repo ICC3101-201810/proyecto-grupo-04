@@ -23,7 +23,8 @@ namespace WindowsFormsApp4
         public Edificio edificio;
         public Persona currentUser;
         public Persona alumnoCastigado;
-        public CastigarAlumno(List<Credencial> _credenciales, List<Persona> _personas, Edificio _edificio, Persona _currentUser, Persona _alumnoCastigado)
+        public int contador;
+        public CastigarAlumno(List<Credencial> _credenciales, List<Persona> _personas, Edificio _edificio, Persona _currentUser, Persona _alumnoCastigado, int _contador)
         {
             InitializeComponent();
 
@@ -41,6 +42,7 @@ namespace WindowsFormsApp4
             LNombreAlumno.Text = alumnoCastigado.nombre;
             LRutAlumno.Text = alumnoCastigado.rut;
             LMailAlumno.Text = alumnoCastigado.email;
+            contador = _contador;
         }
         
         private void BAceptar_Click(object sender, EventArgs e)
@@ -48,7 +50,6 @@ namespace WindowsFormsApp4
             if (CBNoDevolvioSala.Checked || CBNoDevolvioAccesorio.Checked || CBSalaMalEstado.Checked || CBDevolvioSalaSucia.Checked)
             {
                 MessageBox.Show("entra");
-                Close();
                 /*
                 string de, clave, para, asunto, cuerpo;
                 
@@ -82,6 +83,10 @@ namespace WindowsFormsApp4
                     }
                 }
                 */
+                this.Close();
+                th = new Thread(openMenuAdmin);
+                th.SetApartmentState(ApartmentState.STA);
+                th.Start();
             }
         }
 
@@ -95,7 +100,7 @@ namespace WindowsFormsApp4
 
         private void openMenuAdmin()
         {
-            Application.Run(new MenuAdmin(credenciales, personas, edificio, currentUser));
+            Application.Run(new MenuAdmin(credenciales, personas, edificio, currentUser,contador));
         }
     }
 }

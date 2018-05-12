@@ -12,6 +12,7 @@ namespace ClassLibrary2
         public string apellido { get; set; }
         public string email { get; set; }
         public string rut { get; set; }
+        public string cargo { get; set; }
 
 
         public string DisplayAlumno

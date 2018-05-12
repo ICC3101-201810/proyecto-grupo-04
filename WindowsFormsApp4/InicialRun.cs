@@ -19,6 +19,8 @@ namespace WindowsFormsApp4
         public static List<Persona> personas;
         public Edificio edificio;
         public Persona currentUser;
+        public int contadorSala=0;
+   
         public InicialRun()
         {
             InitializeComponent();
@@ -31,7 +33,7 @@ namespace WindowsFormsApp4
 
         private void openLogin()
         {
-            Application.Run(new Login(credenciales, personas, edificio, currentUser));
+            Application.Run(new Login(credenciales, personas, edificio, currentUser,contadorSala));
         }
 
         private void setupData()
@@ -42,18 +44,25 @@ namespace WindowsFormsApp4
             personas.Add(new Estudiante { nombre = "Sebastian", apellido = "Gonzalez", email = "slgonzalez@miuandes.cl", carrera = "Ingenieria", rut = "112223334" });
             personas.Add(new Persona { nombre = "Exequiel", apellido = "Vial", email = "ejvial@miuandes", rut = "223334445" });
 
-            edificio.salas.Add(new Sala { ID = 2001 });
-            edificio.salas.Add(new Sala { ID = 2002 });
-            edificio.salas.Add(new Sala { ID = 2003 });
-            edificio.salas.Add(new Sala { ID = 2004 });
-            edificio.salas.Add(new Sala { ID = 2005 });
-            edificio.salas.Add(new Sala { ID = 2006 });
+            for (;contadorSala<6;contadorSala++)
+            {
+                edificio.salas.Add(new Sala { ID = contadorSala });
+            }
+            
 
-            edificio.accesorios.Add(new Accesorio { nombre = "Computador", valor = 2000 });
-            edificio.accesorios.Add(new Accesorio { nombre = "Plumon", valor = 1000 });
-            edificio.accesorios.Add(new Accesorio { nombre = "Pizzara", valor = 500 });
-            edificio.accesorios.Add(new Accesorio { nombre = "Pizza", valor = 10000 });
+            edificio.accesoriosAlumno.Add(new Accesorio { nombre = "Computador", valor = 2000 });
+            edificio.accesoriosAlumno.Add(new Accesorio { nombre = "Plumon", valor = 1000 });
+            edificio.accesoriosAlumno.Add(new Accesorio { nombre = "Pizzara", valor = 500 });
+            edificio.accesoriosAlumno.Add(new Accesorio { nombre = "Pizza", valor = 10000 });
 
+            edificio.accesoriosProfessor.Add(new Accesorio { nombre = "Computador", valor = 1000 });
+            edificio.accesoriosProfessor.Add(new Accesorio { nombre = "Plumon", valor = 100 });
+            edificio.accesoriosProfessor.Add(new Accesorio { nombre = "Pizarra", valor = 500 });
+            edificio.accesoriosProfessor.Add(new Accesorio { nombre = "Pizza", valor = 9990 });
+            edificio.accesoriosProfessor.Add(new Accesorio { nombre = "Tele", valor = 500 });
+            edificio.accesoriosProfessor.Add(new Accesorio { nombre = "Redbull", valor = 990 });
+            edificio.accesoriosProfessor.Add(new Accesorio { nombre = "Alexa", valor= 1000 });
+            edificio.accesoriosProfessor.Add(new Accesorio { nombre = "PS4", valor = 1500 });
             edificio.Nombre = "Biblioteca";
 
             currentUser = new Persona();

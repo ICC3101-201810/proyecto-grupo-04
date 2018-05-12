@@ -71,7 +71,7 @@
             this.LBSalasDisponibles.FormattingEnabled = true;
             this.LBSalasDisponibles.ItemHeight = 16;
             this.LBSalasDisponibles.Location = new System.Drawing.Point(259, 98);
-            this.LBSalasDisponibles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LBSalasDisponibles.Margin = new System.Windows.Forms.Padding(4);
             this.LBSalasDisponibles.Name = "LBSalasDisponibles";
             this.LBSalasDisponibles.Size = new System.Drawing.Size(231, 324);
             this.LBSalasDisponibles.TabIndex = 2;
@@ -81,7 +81,7 @@
             this.LBSalasNoDisponibles.FormattingEnabled = true;
             this.LBSalasNoDisponibles.ItemHeight = 16;
             this.LBSalasNoDisponibles.Location = new System.Drawing.Point(503, 98);
-            this.LBSalasNoDisponibles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LBSalasNoDisponibles.Margin = new System.Windows.Forms.Padding(4);
             this.LBSalasNoDisponibles.Name = "LBSalasNoDisponibles";
             this.LBSalasNoDisponibles.Size = new System.Drawing.Size(231, 324);
             this.LBSalasNoDisponibles.TabIndex = 3;
@@ -89,7 +89,7 @@
             // PB1
             // 
             this.PB1.Location = new System.Drawing.Point(7, 98);
-            this.PB1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PB1.Margin = new System.Windows.Forms.Padding(4);
             this.PB1.Name = "PB1";
             this.PB1.Size = new System.Drawing.Size(232, 325);
             this.PB1.TabIndex = 4;
@@ -98,27 +98,29 @@
             // BCrearSala
             // 
             this.BCrearSala.Location = new System.Drawing.Point(165, 431);
-            this.BCrearSala.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BCrearSala.Margin = new System.Windows.Forms.Padding(4);
             this.BCrearSala.Name = "BCrearSala";
             this.BCrearSala.Size = new System.Drawing.Size(132, 46);
             this.BCrearSala.TabIndex = 2;
             this.BCrearSala.Text = "Crear Sala";
             this.BCrearSala.UseVisualStyleBackColor = true;
+            this.BCrearSala.Click += new System.EventHandler(this.BCrearSala_Click);
             // 
             // BBorrarSala
             // 
             this.BBorrarSala.Location = new System.Drawing.Point(305, 431);
-            this.BBorrarSala.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BBorrarSala.Margin = new System.Windows.Forms.Padding(4);
             this.BBorrarSala.Name = "BBorrarSala";
             this.BBorrarSala.Size = new System.Drawing.Size(141, 46);
             this.BBorrarSala.TabIndex = 3;
             this.BBorrarSala.Text = "Borrar Sala";
             this.BBorrarSala.UseVisualStyleBackColor = true;
+            this.BBorrarSala.Click += new System.EventHandler(this.BBorrarSala_Click);
             // 
             // BCastigarAlumno
             // 
             this.BCastigarAlumno.Location = new System.Drawing.Point(7, 431);
-            this.BCastigarAlumno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BCastigarAlumno.Margin = new System.Windows.Forms.Padding(4);
             this.BCastigarAlumno.Name = "BCastigarAlumno";
             this.BCastigarAlumno.Size = new System.Drawing.Size(151, 46);
             this.BCastigarAlumno.TabIndex = 1;
@@ -129,17 +131,18 @@
             // BDesocuparSala
             // 
             this.BDesocuparSala.Location = new System.Drawing.Point(455, 431);
-            this.BDesocuparSala.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BDesocuparSala.Margin = new System.Windows.Forms.Padding(4);
             this.BDesocuparSala.Name = "BDesocuparSala";
             this.BDesocuparSala.Size = new System.Drawing.Size(147, 46);
             this.BDesocuparSala.TabIndex = 4;
             this.BDesocuparSala.Text = "Desocupar Sala";
             this.BDesocuparSala.UseVisualStyleBackColor = true;
+            this.BDesocuparSala.Click += new System.EventHandler(this.BDesocuparSala_Click);
             // 
             // BCerrarSesion
             // 
             this.BCerrarSesion.Location = new System.Drawing.Point(609, 431);
-            this.BCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BCerrarSesion.Margin = new System.Windows.Forms.Padding(4);
             this.BCerrarSesion.Name = "BCerrarSesion";
             this.BCerrarSesion.Size = new System.Drawing.Size(125, 46);
             this.BCerrarSesion.TabIndex = 5;
@@ -182,7 +185,7 @@
             this.LBAlumnos.FormattingEnabled = true;
             this.LBAlumnos.ItemHeight = 16;
             this.LBAlumnos.Location = new System.Drawing.Point(7, 98);
-            this.LBAlumnos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LBAlumnos.Margin = new System.Windows.Forms.Padding(4);
             this.LBAlumnos.Name = "LBAlumnos";
             this.LBAlumnos.Size = new System.Drawing.Size(231, 324);
             this.LBAlumnos.TabIndex = 13;
@@ -219,7 +222,7 @@
             this.Controls.Add(this.LBSalasDisponibles);
             this.Controls.Add(this.LSalasNoDisponibles);
             this.Controls.Add(this.LSalasDisponibles);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "MenuAdmin";
             this.ShowIcon = false;

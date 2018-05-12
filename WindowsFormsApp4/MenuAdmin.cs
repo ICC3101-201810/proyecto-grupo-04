@@ -20,21 +20,21 @@ namespace WindowsFormsApp4
         public Edificio edificio;
         public Persona currentUser;
         public Persona alumnoCastigado;
-        private List<Sala> salaNoDisponible = new List<Sala>();
+        public int contadorSala;
 
         BindingSource personasBinding = new BindingSource();
         BindingSource salaNoDisponibleBinding = new BindingSource();
         BindingSource salasBinding = new BindingSource();
         BindingSource accesoriosBinding = new BindingSource();
 
-        public MenuAdmin(List<Credencial> _credenciales, List<Persona> _personas, Edificio _edificio, Persona _currentUser)
+        public MenuAdmin(List<Credencial> _credenciales, List<Persona> _personas, Edificio _edificio, Persona _currentUser,int _contador)
         { 
             InitializeComponent();
             personas = _personas;
             credenciales = _credenciales;
             edificio = _edificio;
             currentUser = _currentUser;
-            salaNoDisponible = edificio.salasNo;
+            contadorSala = _contador;
 
             //ALUMNOS
             personasBinding.DataSource = personas;
@@ -51,8 +51,8 @@ namespace WindowsFormsApp4
             LBSalasDisponibles.DisplayMember = "Display";
 
             //Sala Arrendada
-            salaNoDisponibleBinding.DataSource = salaNoDisponible;
-            LBSalasNoDisponibles.DataSource = salaNoDisponible;
+            salaNoDisponibleBinding.DataSource = edificio.salas;
+            LBSalasNoDisponibles.DataSource = edificio.salas;
 
             LBSalasNoDisponibles.ValueMember = "DisplayAdmin";
             LBSalasNoDisponibles.DisplayMember = "DisplayAdmin";
@@ -69,7 +69,7 @@ namespace WindowsFormsApp4
 
         private void openLogin()
         {
-            Application.Run(new Login(credenciales,personas, edificio, currentUser));
+            Application.Run(new Login(credenciales,personas, edificio, currentUser,contadorSala));
         }
 
         private void BCastigarAlumno_Click(object sender, EventArgs e)
@@ -91,6 +91,7 @@ namespace WindowsFormsApp4
                         alumnoCastigado = p;
                     }
                 }
+                this.Close();
                 th = new Thread(openCastigarAlumno);
                 th.SetApartmentState(ApartmentState.STA);
                 th.Start();
@@ -103,7 +104,29 @@ namespace WindowsFormsApp4
 
         private void openCastigarAlumno()
         {
-            Application.Run(new CastigarAlumno(credenciales, personas, edificio, currentUser, alumnoCastigado));
+            Application.Run(new CastigarAlumno(credenciales, personas, edificio, currentUser, alumnoCastigado, contadorSala));
+        }
+
+        private void BCrearSala_Click(object sender, EventArgs e)
+        {
+            edificio.salas.Add(new Sala {ID=++contadorSala});
+            salasBinding.ResetBindings(false);
+        }
+
+        private void BBorrarSala_Click(object sender, EventArgs e)
+        {
+            Sala SalaSelecionada = (Sala)LBSalasDisponibles.SelectedItem;
+            edificio.salas.Remove(SalaSelecionada);
+            salasBinding.ResetBindings(false);
+        }
+
+        private void BDesocuparSala_Click(object sender, EventArgs e)
+        {
+            Sala SalaSelecionada = (Sala)LBSalasNoDisponibles.SelectedItem;
+            edificio.salas.Add(SalaSelecionada);
+            edificio.salasNo.Remove(SalaSelecionada);
+            salasBinding.ResetBindings(false);
+            salaNoDisponibleBinding.ResetBindings(false);
         }
     }
 }
