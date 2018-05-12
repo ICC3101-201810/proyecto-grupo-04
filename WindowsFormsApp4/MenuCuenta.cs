@@ -28,6 +28,7 @@ namespace WindowsFormsApp4
             credenciales = _credenciales;
             personas = _personas;
             contador = _contador;
+            edificio = _edificio;
         }
         private void BAceptar_Click(object sender, EventArgs e)
         {

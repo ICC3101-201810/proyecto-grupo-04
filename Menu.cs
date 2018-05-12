@@ -46,19 +46,28 @@ namespace WindowsFormsApp4
             currentUser = _currentUser;
             contador = _contador;
 
-            
-            
+
 
 
             //ACCESORIOS DISPONIBLES ALUMNOS
-           
-            accesoriosBinding.DataSource = edificio.accesoriosAlumno;
-            ListaAcsesorios.DataSource = accesoriosBinding;
+            if (currentUser.cargo == "ALUMNO")
+            {
+                accesoriosBinding.DataSource = edificio.accesoriosAlumno;
+                ListaAcsesorios.DataSource = accesoriosBinding;
 
-            ListaAcsesorios.DisplayMember = "DisplayA";
-            ListaAcsesorios.ValueMember = "DisplayA";
-            
-            
+                ListaAcsesorios.DisplayMember = "DisplayA";
+                ListaAcsesorios.ValueMember = "DisplayA";
+            }
+           
+            //ACCESORIOS DISPONIBLES ALUMNOS
+            else if (currentUser.cargo == "PROFESOR")
+            {
+                accesoriosBinding.DataSource = edificio.accesoriosProfessor;
+                ListaAcsesorios.DataSource = accesoriosBinding;
+
+                ListaAcsesorios.DisplayMember = "DisplayA";
+                ListaAcsesorios.ValueMember = "DisplayA";
+            }
 
             //SALAS DISPONIBLES
             salasBinding.DataSource = edificio.salas;
