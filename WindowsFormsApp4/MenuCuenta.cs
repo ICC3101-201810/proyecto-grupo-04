@@ -60,7 +60,7 @@ namespace WindowsFormsApp4
 
                     if (cargo == "ALUMNO") //Crea La nueva cuenta como Estudiante
                     {
-                        Estudiante b = new Estudiante {nombre=nombre,apellido= apellido,email= mail,carrera= multi,rut=rut,cargo="ALUMNO" };
+                        Estudiante b = new Estudiante {nombre=nombre,apellido= apellido,email= mail,carrera= multi,rut=rut,cargo= "ALUMNO" };
                         personas.Add(b);
                     }
                     else if (cargo == "PROFESOR")//Crea La nueva cuenta como Profesor

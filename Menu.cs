@@ -20,6 +20,7 @@ namespace WindowsFormsApp4
         public List<Persona> personas;
         public Edificio edificio;
         public Persona currentUser;
+        public Sala salaParaDesocupar;
 
 
         private List<Accesorio> carrito = new List<Accesorio>();
@@ -45,26 +46,19 @@ namespace WindowsFormsApp4
             currentUser = _currentUser;
             contador = _contador;
 
+            
+            
+
 
             //ACCESORIOS DISPONIBLES ALUMNOS
-            if (currentUser.cargo == "ALUMNO")
-            {
-                accesoriosBinding.DataSource = edificio.accesoriosAlumno;
-                ListaAcsesorios.DataSource = accesoriosBinding;
+           
+            accesoriosBinding.DataSource = edificio.accesoriosAlumno;
+            ListaAcsesorios.DataSource = accesoriosBinding;
 
-                ListaAcsesorios.DisplayMember = "DisplayA";
-                ListaAcsesorios.ValueMember = "DisplayA";
-            }
-
-            //ACCESORIOS DISPONIBLES PROFESOR
-            if (currentUser.cargo == "PROFESOR")
-            {
-                accesoriosBinding.DataSource = edificio.accesoriosProfessor;
-                ListaAcsesorios.DataSource = accesoriosBinding;
-
-                ListaAcsesorios.DisplayMember = "DisplayA";
-                ListaAcsesorios.ValueMember = "DisplayA";
-            }
+            ListaAcsesorios.DisplayMember = "DisplayA";
+            ListaAcsesorios.ValueMember = "DisplayA";
+            
+            
 
             //SALAS DISPONIBLES
             salasBinding.DataSource = edificio.salas;
@@ -151,6 +145,11 @@ namespace WindowsFormsApp4
 
             total.Clear();
             totalBinding.ResetBindings(false);
+
+            this.Close();
+            th = new Thread(openLogin);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
         }
 
         private void ArrendarSalaBotton_Click(object sender, EventArgs e)
@@ -176,10 +175,26 @@ namespace WindowsFormsApp4
 
         private void BCerrarSesion_Click(object sender, EventArgs e)
         {
-            this.Close();
-            th = new Thread(openLogin);
-            th.SetApartmentState(ApartmentState.STA);
-            th.Start();
+            int paso = 0;
+            foreach(Sala s in edificio.salasNo)
+            {
+                if(s.Rut==currentUser.rut)
+                {
+                    salaParaDesocupar = s;
+                
+                    paso = 1;
+                }
+            }
+            if(paso==1)
+            {
+                edificio.salas.Add(salaParaDesocupar);
+                edificio.salasNo.Remove(salaParaDesocupar);
+                MessageBox.Show("La sala se a desocupada");
+            }
+            if(paso==0)
+            {
+                MessageBox.Show("Usted no tiene sala para desocupar");
+            }
         }
 
         private void openLogin()

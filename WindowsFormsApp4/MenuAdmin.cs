@@ -124,7 +124,6 @@ namespace WindowsFormsApp4
         {
             Sala SalaSelecionada = (Sala)LBSalasNoDisponibles.SelectedItem;
             edificio.salas.Add(SalaSelecionada);
-          
             edificio.salasNo.Remove(SalaSelecionada);
             salasBinding.ResetBindings(false);
             salaNoDisponibleBinding.ResetBindings(false);
