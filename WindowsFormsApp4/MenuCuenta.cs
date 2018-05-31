@@ -9,9 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using ClassLibrary2;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace WindowsFormsApp4
 {
+    [Serializable]
     public partial class MenuCuenta : Form
     {
         Thread th;
@@ -58,21 +61,42 @@ namespace WindowsFormsApp4
                 {
                     ClassLibrary2.Credencial a = new ClassLibrary2.Credencial(mail, password, cargo, rut);
                     credenciales.Add(a); //Agrega la credencial de la nueva cuenta, asociada a la persona mediante el rut
+                    //serializamos la lista credenciales apenas se le agrega una
+                    BinaryFormatter formatter1 = new BinaryFormatter();
+                    Stream miStreamc = new FileStream("Credenciales.bin", FileMode.Open, FileAccess.Write, FileShare.ReadWrite);
+                    formatter1.Serialize(miStreamc, credenciales);
+                    miStreamc.Close();
+
 
                     if (cargo == "ALUMNO") //Crea La nueva cuenta como Estudiante
                     {
                         Estudiante b = new Estudiante {nombre=nombre,apellido= apellido,email= mail,carrera= multi,rut=rut,cargo= "ALUMNO" };
                         personas.Add(b);
+                        //serializamos la lista personas apenas se le agrega una persona 
+                        BinaryFormatter formatter = new BinaryFormatter();
+                        Stream miStream = new FileStream("Personas.bin", FileMode.Open, FileAccess.Write, FileShare.ReadWrite);
+                        formatter.Serialize(miStream, personas);
+                        miStream.Close();
                     }
                     else if (cargo == "PROFESOR")//Crea La nueva cuenta como Profesor
                     {
                         Profesor b = new Profesor {nombre= nombre,apellido= apellido,email= mail,facultad= multi,rut= rut ,cargo="PROFESOR"};
                         personas.Add(b);
+                        //serializamos la lista personas apenas se le agrega una persona 
+                        BinaryFormatter formatter = new BinaryFormatter();
+                        Stream miStream = new FileStream("Personas.bin", FileMode.Open, FileAccess.Write, FileShare.ReadWrite);
+                        formatter.Serialize(miStream, personas);
+                        miStream.Close();
                     }
                     else if (cargo == "ADMIN")//Crea La nueva cuenta como Admin
                     {
                         Persona b = new Persona {nombre= nombre,apellido= apellido,email= mail,rut= rut,cargo="ADMIN" };
                         personas.Add(b);
+                        //serializamos la lista personas apenas se le agrega una persona 
+                        BinaryFormatter formatter = new BinaryFormatter();
+                        Stream miStream = new FileStream("Personas.bin", FileMode.Open, FileAccess.Write, FileShare.ReadWrite);
+                        formatter.Serialize(miStream, personas);
+                        miStream.Close();
                     }
                 }
                 //Limpiando Los TextBox despues de recibir parametros

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary2
 {
+    [Serializable]
     public class Sala
     {
         public int ID { get; set; }

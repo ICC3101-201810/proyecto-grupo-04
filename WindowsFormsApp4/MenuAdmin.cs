@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using ClassLibrary2;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace WindowsFormsApp4
 {
@@ -110,6 +112,11 @@ namespace WindowsFormsApp4
         private void BCrearSala_Click(object sender, EventArgs e)
         {
             edificio.salas.Add(new Sala {ID=++contadorSala});
+            //serializamos los edificios 
+            BinaryFormatter formattere = new BinaryFormatter();
+            Stream miStreame = new FileStream("Edificios.bin", FileMode.Open, FileAccess.Write, FileShare.ReadWrite);
+            formattere.Serialize(miStreame, edificio);
+            miStreame.Close();
             salasBinding.ResetBindings(false);
         }
 
@@ -117,6 +124,11 @@ namespace WindowsFormsApp4
         {
             Sala SalaSelecionada = (Sala)LBSalasDisponibles.SelectedItem;
             edificio.salas.Remove(SalaSelecionada);
+            //serializamos los edificios 
+            BinaryFormatter formattere = new BinaryFormatter();
+            Stream miStreame = new FileStream("Edificios.bin", FileMode.Open, FileAccess.Write, FileShare.ReadWrite);
+            formattere.Serialize(miStreame, edificio);
+            miStreame.Close();
             salasBinding.ResetBindings(false);
         }
 
@@ -127,6 +139,11 @@ namespace WindowsFormsApp4
             edificio.salasNo.Remove(SalaSelecionada);
             salasBinding.ResetBindings(false);
             salaNoDisponibleBinding.ResetBindings(false);
+            //serializamos los edificios 
+            BinaryFormatter formattere = new BinaryFormatter();
+            Stream miStreame = new FileStream("Edificios.bin", FileMode.Open, FileAccess.Write, FileShare.ReadWrite);
+            formattere.Serialize(miStreame, edificio);
+            miStreame.Close();
 
         }
     }

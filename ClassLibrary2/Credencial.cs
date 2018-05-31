@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary2
 {
+    [Serializable]
     public class Credencial
     {
         public string username { get; set; }

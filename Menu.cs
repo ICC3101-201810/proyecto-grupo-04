@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace WindowsFormsApp4
 {
@@ -154,6 +156,13 @@ namespace WindowsFormsApp4
 
             total.Clear();
             totalBinding.ResetBindings(false);
+
+            //serializamos los edificios 
+            BinaryFormatter formattere = new BinaryFormatter();
+            Stream miStreame = new FileStream("Edificios.bin", FileMode.Open, FileAccess.Write, FileShare.ReadWrite);
+            formattere.Serialize(miStreame, edificio);
+            miStreame.Close();
+
 
             this.Close();
             th = new Thread(openLogin);

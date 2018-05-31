@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using ClassLibrary2;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace WindowsFormsApp4
 {
@@ -71,6 +73,30 @@ namespace WindowsFormsApp4
 
         private void button1_Click(object sender, EventArgs e)
         {
+            BinaryFormatter formatter = new BinaryFormatter();
+            Stream mistream = new FileStream("Personas.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.ReadWrite);
+            if (mistream.Length != 0 )
+            {
+                personas = (List<Persona>)formatter.Deserialize(mistream);
+            }
+            mistream.Close();
+            BinaryFormatter formatter1 = new BinaryFormatter();
+            Stream mistreamc = new FileStream("Credenciales.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.ReadWrite);
+            if (mistreamc.Length != 0)
+            {
+                credenciales = (List<Credencial>)formatter1.Deserialize(mistreamc);
+            }
+            mistreamc.Close();
+
+            BinaryFormatter formattere = new BinaryFormatter();
+            Stream mistreame = new FileStream("Edificios.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.ReadWrite);
+            if (mistreame.Length != 0)
+            {
+                edificio = (Edificio)formatter1.Deserialize(mistreame);
+            }
+            mistreame.Close();
+
+
             this.Close();
             th = new Thread(openLogin);
             th.SetApartmentState(ApartmentState.STA);
