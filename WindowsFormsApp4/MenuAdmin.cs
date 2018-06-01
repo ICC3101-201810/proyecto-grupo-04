@@ -54,7 +54,7 @@ namespace WindowsFormsApp4
 
             //Sala Arrendada
             salaNoDisponibleBinding.DataSource = edificio.salasNo;
-            LBSalasNoDisponibles.DataSource = edificio.salasNo;
+            LBSalasNoDisponibles.DataSource = salaNoDisponibleBinding;
 
             LBSalasNoDisponibles.ValueMember = "DisplayAdmin";
             LBSalasNoDisponibles.DisplayMember = "DisplayAdmin";
@@ -135,10 +135,13 @@ namespace WindowsFormsApp4
         private void BDesocuparSala_Click(object sender, EventArgs e)
         {
             Sala SalaSelecionada = (Sala)LBSalasNoDisponibles.SelectedItem;
-            edificio.salas.Add(SalaSelecionada);
             edificio.salasNo.Remove(SalaSelecionada);
-            salasBinding.ResetBindings(false);
+            edificio.salas.Add(SalaSelecionada);
+            
             salaNoDisponibleBinding.ResetBindings(false);
+
+            salasBinding.ResetBindings(false);
+            
             //serializamos los edificios 
             BinaryFormatter formattere = new BinaryFormatter();
             Stream miStreame = new FileStream("Edificios.bin", FileMode.Open, FileAccess.Write, FileShare.ReadWrite);
